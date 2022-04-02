@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Awesome Image Viewer</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<header>
+  <h1>Image Viewer</h1>
+  <h3>Click on the images to open</h3>
+</header>
+
+<div class="img-row">
+  <div class="column">
+    <img src="https://source.unsplash.com/78A265wPiO4" alt="Mountain"  onclick="openImage(this);">
+  </div>
+  <div class="column">
+    <img src="https://source.unsplash.com/ndN00KmbJ1c" alt="Sun" onclick="openImage(this);">
+  </div>
+  <div class="column">
+    <img src="https://source.unsplash.com/pHANr-CpbYM" alt="Rocks" onclick="openImage(this);">
+  </div>
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+  <script  src="./script.js"></script>
+
+</body>
+</html>

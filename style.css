@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  height: 100vh;
+  width: min(800px, 80%);
+  margin: auto;
+  background-color: #F8F9FD;
+}
+
+header{
+  text-align:center;
+}
+
+.img-row{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-gap: 15px;
+}
+
+.column img {
+  opacity: 0.8; 
+  cursor: pointer;
+  width: 100%;
+}
+
+.column img:hover {
+  opacity: 1;
+  transform: scale(1.02);
+  transition: .3s;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+  top: 20px;
+}
+.container img{
+  height:390px;
+}
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+  transition:color 0.5s ease;
+}
+.closebtn:hover{
+  color:red;
+}
